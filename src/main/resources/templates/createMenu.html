@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+<header>
+    <div id="main_div">
+        <h2>Создание задачи</h2>
+        <div id="action">
+            <form action="/createTask" method="get"> <!-- Указываем путь к контроллеру и метод GET -->
+                <div>
+                <textarea placeholder="Задача" name="task" id="task" required></textarea>
+                </div>
+                <input type="submit" value="Сохранить" id="save_task_description_button"> <!-- Кнопка отправки формы -->
+            </form>
+        </div>
+    </div>
+</header>
+</body>
+</html>

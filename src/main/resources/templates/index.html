@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+<header>
+    <div id="main_div">
+        <h2>ToDoList</h2>
+        <div id="action">
+            <form action="/createMenu" method="get">
+                <input type="text" id="name_task" placeholder="Название задания" name="name" required maxlength="20">
+                <input type="submit" id="create_button" value="+">
+            </form>
+
+            <div id="text_below">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Номер задачи</th>
+                        <th>Название задачи</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Проверка, если taskList пуст или не инициализирован -->
+                    <tr th:if="${taskList == null || #lists.isEmpty(taskList)}">
+                        <td colspan="2">Задачи отсутствуют</td>
+                    </tr>
+                    <!-- Если список не пуст, отображаем его элементы -->
+                    <tr th:each="taskElement : ${taskList}">
+                        <td><span th:text="${taskElement.id}"></span></td>
+                        <td><a th:text="${taskElement.name}" th:href="@{${taskElement.personalUrl}}" id="task_href<"></a></td>
+                        <td><a th:href="@{/delete/{taskId}(taskId=${taskElement.id})}">
+                            <button type="button" id="delete_button">Удал.</button>
+                        </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</header>
+</body>
+</html>
+

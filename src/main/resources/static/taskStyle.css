@@ -1,0 +1,45 @@
+body {
+background-color: #5d65fc;
+}
+
+#main_div {
+border-radius: 5px;
+border: solid black 1px;
+background-color: grey;
+width: 600px;
+height: 450px;
+position: relative;
+top: 50%;
+left: 35%;
+padding-bottom: 95px;
+margin-top: 80px;
+word-wrap: break-word;
+}
+
+h3 {
+text-align: center;
+}
+
+h4 {
+text-align: center;
+}
+
+p {
+position: absolute
+text-align: center;
+}
+
+button {
+height: 50px;
+width: 80px;
+position: absolute;
+top: 490px;
+left: 510px;
+border: solid, black, 1px;
+border-radius: 5px;
+}
+
+
+
+
+

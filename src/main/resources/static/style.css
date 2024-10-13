@@ -1,0 +1,103 @@
+body {
+background-color: #5d65fc;
+}
+
+#main_div {
+border-radius: 5px;
+border: solid, black, 1px;
+background-color: grey;
+width: 600px;
+height: 450px;
+position: relative;
+top: 50%;
+left: 35%;
+padding-bottom: 95px;
+margin-top: 80px;
+}
+
+table {
+table-layout: fixed;
+width: 80%;
+margin-left: -30px;
+border-collapse: collapse;
+border: 3px solid purple;
+}
+
+td {
+text-overflow: ellipsis;
+}
+
+#action {
+podding-top: -100px;
+position: absolute;
+left: 150px;
+}
+
+h2 {
+text-align: center;
+}
+
+#name_task {
+height: 50px;
+width: 250px;
+font-size: 20px;
+border: solid, black, 1px;
+border-radius: 5px;
+}
+
+#create_button {
+height: 51px;
+width: 51px;
+border: solid, black, 1px;
+border-radius: 5px;
+}
+
+#create_button:hover {
+cursor: pointer;
+background-color: #b8b8b8;
+}
+
+#text_below {
+margin-top: 20px;
+text-align: center;
+}
+
+#delete_button {
+height: 45px;
+width: 55px;
+text-align
+border: solid, black, 1px;
+border-radius: 5px;
+}
+
+#delete_button:hover{
+cursor: pointer;
+background-color: red;
+}
+
+textarea {
+height: 60px;
+width: 300px;
+position: absolute;
+border: solid, black, 1px;
+border-radius: 5px;
+}
+
+#save_task_description_button {
+height: 40px;
+width: 130px;
+margin-top: 420px;
+margin-left: 310px;
+border: solid, black, 1px;
+border-radius: 5px;
+}
+
+#save_task_description_button:hover {
+background-color: #b8b8b8;
+cursor: pointer;
+}
+
+#task_href:hover {
+color: #2631ff;
+}
+
