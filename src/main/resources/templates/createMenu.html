@@ -10,11 +10,11 @@
     <div id="main_div">
         <h2>Создание задачи</h2>
         <div id="action">
-            <form action="/createTask" method="get"> <!-- Указываем путь к контроллеру и метод GET -->
+            <form action="/createTask" method="post">
                 <div>
                 <textarea placeholder="Задача" name="task" id="task" required></textarea>
                 </div>
-                <input type="submit" value="Сохранить" id="save_task_description_button"> <!-- Кнопка отправки формы -->
+                <input type="submit" value="Сохранить" id="save_task_description_button">
             </form>
         </div>
     </div>

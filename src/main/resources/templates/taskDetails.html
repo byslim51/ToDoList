@@ -12,7 +12,8 @@
         <h3 id="description">Описание:</h3>
         <div id="action">
             <h4 th:text="${task}"></h4>
-            <a href="/"><button>Меню</button></a>
+            <a  th:href="@{/changeTaskDescription(taskHref=${taskHref})}" ><button id="changeTaskDescription">Редактировать</button></a>
+            <a href="/"><button id="menu">Меню</button></a>
         </div>
     </div>
 </header>

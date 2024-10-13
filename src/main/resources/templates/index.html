@@ -29,9 +29,9 @@
                         <td colspan="2">Задачи отсутствуют</td>
                     </tr>
                     <!-- Если список не пуст, отображаем его элементы -->
-                    <tr th:each="taskElement : ${taskList}">
+                    <tr th:each="taskElement : ${taskList}" >
                         <td><span th:text="${taskElement.id}"></span></td>
-                        <td><a th:text="${taskElement.name}" th:href="@{${taskElement.personalUrl}}" id="task_href<"></a></td>
+                        <td><a th:text="${taskElement.name}" th:href="@{${taskElement.personalUrl}(taskUrl=${taskElement.personalUrl})}" id="task_href"></a></td>
                         <td><a th:href="@{/delete/{taskId}(taskId=${taskElement.id})}">
                             <button type="button" id="delete_button">Удал.</button>
                         </a>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <title>Изменение задачи</title>
+    <link rel="stylesheet" href="/taskStyle.css"/>
+</head>
+<body>
+<header>
+    <div id="main_div">
+        <form th:action="@{/updateTask/{taskHref}(taskHref=${task_url})}" method="post">
+            <h3 id="name">Название: <input type="text" th:value="${task_name}" name="task_name" required></h3>
+            <h3 id="description">Описание:</h3>
+            <div id="action">
+                <h4><textarea th:placeholder="${task_description}" name="task_description" required></textarea></h4>
+                <input type="submit" value="Сохранить" id="menu">
+            </div>
+        </form>
+    </div>
+</header>
+</body>
+</html>
