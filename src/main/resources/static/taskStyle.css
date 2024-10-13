@@ -49,6 +49,16 @@ border: solid, black, 1px;
 border-radius: 5px;
 }
 
+#changeTaskDescription:hover {
+cursor: pointer;
+background-color: #b8b8b8;
+}
+
+#menu:hover {
+cursor: pointer;
+background-color: #b8b8b8;
+}
+
 
 
 
