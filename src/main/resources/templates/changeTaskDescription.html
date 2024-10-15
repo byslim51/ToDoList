@@ -7,13 +7,34 @@
 </head>
 <body>
 <header>
+    <div id="path_div">
+        <a href="/"><button id="pathTask">Список задач</button></a>
+        <a href="/usersList"><button id="pathUser">Список пользователей</button></a>
+    </div>
+
     <div id="main_div">
         <form th:action="@{/updateTask/{taskHref}(taskHref=${task_url})}" method="post">
             <h3 id="name">Название: <input type="text" th:value="${task_name}" name="task_name" required></h3>
+
+            <div id="change_div">
+                <label id="statusLabel" for="userType">Сменить статус:</label>
+                <select id="status" name="status" required>
+                    <option value="Не выполнен" selected>Не выполнен</option>
+                    <option value="Выполнен">Выполнен</option>
+                </select><br><br>
+
+                <label id="userTypeLabel" for="userType">Сменить пользователя:</label>
+                <select id="userType" name="userType" required>
+                    <option value="default" selected>По умолчанию</option>
+                    <option th:each="userElement : ${userMap}" th:value="${userElement.name}" th:text="${userElement.name}"></option>
+                </select>
+            </div>
+
             <h3 id="description">Описание:</h3>
             <div id="action">
                 <h4><textarea th:placeholder="${task_description}" name="task_description" required></textarea></h4>
-                <input type="submit" value="Сохранить" id="menu">
+                <a href="/"><input type="button" value="Отмена" id="cancelButton"></a>
+                <input type="submit" value="Сохранить" id="saveChanges">
             </div>
         </form>
     </div>

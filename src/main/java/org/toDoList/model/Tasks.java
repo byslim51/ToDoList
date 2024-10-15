@@ -7,8 +7,8 @@ public class Tasks {
     String name;
     String task;
     String personalUrl;
-
-
+    String userName;
+    String status;
 
     public int getId() {
         return id;
@@ -41,4 +41,21 @@ public class Tasks {
     public void setPersonalUrl(String personalUrl) {
         this.personalUrl = personalUrl;
     }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
+

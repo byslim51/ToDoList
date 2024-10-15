@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <title>Создание пользователя</title>
+    <link rel="stylesheet" href="/userstyle.css"/>
+</head>
+<body>
+<header>
+    <div id="path_div">
+        <a href="/"><button id="pathTask">Список задач</button></a>
+        <a href="/usersList"><button id="pathUser">Список пользователей</button></a>
+    </div>
+    <div id="main_div">
+        <h2>Создание нового пользователя</h2>
+        <div id="action">
+            <form action="/createUser" method="post">
+                <div>
+                    <input type="text" class="userInfo" placeholder="Имя" name="name" required><br>
+                    <input type="number" class="userInfo" placeholder="Возраст" name="age" required>
+                </div>
+                <input type="submit" value="Сохранить" id="save_task_description_button">
+            </form>
+        </div>
+    </div>
+</header>
+</body>
+</html>

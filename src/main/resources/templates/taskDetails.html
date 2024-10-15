@@ -7,13 +7,16 @@
 </head>
 <body>
 <header>
+    <div id="path_div">
+        <a href="/"><button id="pathTask">Список задач</button></a>
+        <a href="/usersList"><button id="pathUser">Список пользователей</button></a>
+    </div>
     <div id="main_div">
         <h3 id="name">Название: <span th:text="${taskName}"></span></h3>
         <h3 id="description">Описание:</h3>
         <div id="action">
             <h4 th:text="${task}"></h4>
             <a  th:href="@{/changeTaskDescription(taskHref=${taskHref})}" ><button id="changeTaskDescription">Редактировать</button></a>
-            <a href="/"><button id="menu">Меню</button></a>
         </div>
     </div>
 </header>

@@ -7,6 +7,10 @@
 </head>
 <body>
 <header>
+    <div id="path_div">
+        <a href="/"><button id="pathTask">Список задач</button></a>
+        <a href="/usersList"><button id="pathUser">Список пользователей</button></a>
+    </div>
     <div id="main_div">
         <h2>ToDoList</h2>
         <div id="action">
@@ -21,17 +25,21 @@
                     <tr>
                         <th>Номер задачи</th>
                         <th>Название задачи</th>
+                        <th>Имя пользователя</th>
+                        <th>Статус задачи</th>
                     </tr>
                     </thead>
                     <tbody>
                     <!-- Проверка, если taskList пуст или не инициализирован -->
                     <tr th:if="${taskList == null || #lists.isEmpty(taskList)}">
-                        <td colspan="2">Задачи отсутствуют</td>
+                        <td colspan="4">Задачи отсутствуют</td>
                     </tr>
                     <!-- Если список не пуст, отображаем его элементы -->
                     <tr th:each="taskElement : ${taskList}" >
                         <td><span th:text="${taskElement.id}"></span></td>
                         <td><a th:text="${taskElement.name}" th:href="@{${taskElement.personalUrl}(taskUrl=${taskElement.personalUrl})}" id="task_href"></a></td>
+                        <td><a th:text="${taskElement.userName}"></a></td>
+                        <td><a th:text="${taskElement.status}"></a></td>
                         <td><a th:href="@{/delete/{taskId}(taskId=${taskElement.id})}">
                             <button type="button" id="delete_button">Удал.</button>
                         </a>
@@ -40,7 +48,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
 </header>

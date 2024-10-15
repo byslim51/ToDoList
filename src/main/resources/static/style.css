@@ -4,21 +4,21 @@ background-color: #5d65fc;
 
 #main_div {
 border-radius: 5px;
-border: solid, black, 1px;
+border: solid black 1px;
 background-color: grey;
 width: 600px;
 height: 450px;
 position: relative;
 top: 50%;
 left: 35%;
-padding-bottom: 95px;
-margin-top: 80px;
+padding-bottom: 120px;
+margin-top: 15px;
 }
 
 table {
 table-layout: fixed;
-width: 80%;
-margin-left: -30px;
+width: 115%;
+margin-left: -105px;
 border-collapse: collapse;
 border: 3px solid purple;
 }
@@ -75,6 +75,17 @@ cursor: pointer;
 background-color: red;
 }
 
+#userTypeLabel {
+position: absolute;
+top: 100px;
+}
+
+#userType {
+position: absolute;
+top: 100px;
+left: 175px;
+}
+
 textarea {
 height: 60px;
 width: 300px;
@@ -86,7 +97,7 @@ border-radius: 5px;
 #save_task_description_button {
 height: 40px;
 width: 130px;
-margin-top: 420px;
+margin-top: 430px;
 margin-left: 310px;
 border: solid, black, 1px;
 border-radius: 5px;
@@ -100,4 +111,50 @@ cursor: pointer;
 #task_href:hover {
 color: #2631ff;
 }
+
+#pathUser {
+position: absolute;
+margin-left: 150px;
+margin-top: 10px;
+height: 40px;
+width: 130px;
+border: solid black 1px;
+border-radius: 5px;
+}
+
+#pathTask {
+position: absolute;
+margin-left: 10px;
+margin-top: 10px;
+height: 40px;
+width: 130px;
+border: solid black 1px;
+border-radius: 5px;
+}
+
+#pathTask:hover {
+cursor: pointer;
+background-color: #b8b8b8;
+}
+
+#pathUser:hover {
+cursor: pointer;
+background-color: #b8b8b8;
+}
+
+
+#path_div {
+border-radius: 5px;
+border: solid black 1px;
+background-color: grey;
+width: 600px;
+height: 60px;
+position: relative;
+top: 10%;
+left: 35%;
+padding-bottom: -50px;
+margin-top: 30px;
+}
+
+
 

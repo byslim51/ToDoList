@@ -7,12 +7,21 @@
 </head>
 <body>
 <header>
+    <div id="path_div">
+        <a href="/"><button id="pathTask">Список задач</button></a>
+        <a href="/usersList"><button id="pathUser">Список пользователей</button></a>
+    </div>
     <div id="main_div">
         <h2>Создание задачи</h2>
         <div id="action">
             <form action="/createTask" method="post">
                 <div>
-                <textarea placeholder="Задача" name="task" id="task" required></textarea>
+                    <textarea placeholder="Задача" name="task" id="task" required></textarea><br>
+                    <label id="userTypeLabel" for="userType">Выберите пользователя:</label>
+                    <select id="userType" name="userType" required>
+                        <option value="default" selected>По умолчанию</option>
+                        <option th:each="userElement : ${userMap}" th:value="${userElement.name}" th:text="${userElement.name}"></option>
+                    </select>
                 </div>
                 <input type="submit" value="Сохранить" id="save_task_description_button">
             </form>

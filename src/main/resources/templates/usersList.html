@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="/userstyle.css"/>
+</head>
+<body>
+<header>
+    <div id="path_div">
+        <a href="/"><button id="pathTask">Список задач</button></a>
+        <a href="/usersList"><button id="pathUser">Список пользователей</button></a>
+    </div>
+    <div id="main_div">
+        <h2>ToDoList</h2>
+        <div id="action">
+            <form action="/userCreateMenu" method="get">
+                <input type="submit" id="create_button" value="Создать нового пользователя">
+            </form>
+
+            <div id="text_below">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Номер пользователя</th>
+                        <th>Название пользователя</th>
+                        <th>Возраст пользователя</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Проверка, если taskList пуст или не инициализирован -->
+                    <tr th:if="${userList == null || #lists.isEmpty(userList)}">
+                        <td colspan="3">Пользователи отсутствуют</td>
+                    </tr>
+                    <!-- Если список не пуст, отображаем его элементы -->
+                    <tr th:each="userElement : ${userList}" >
+                        <td><span th:text="${userElement.id}"></span></td>
+                        <td><span th:text="${userElement.name}"></span></td>
+                        <td><span th:text="${userElement.age}"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>
