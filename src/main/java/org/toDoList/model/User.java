@@ -1,6 +1,6 @@
 package org.toDoList.model;
 
-public class Users {
+public class User {
     int id;
     String name;
     int age;

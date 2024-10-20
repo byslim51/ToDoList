@@ -1,14 +1,16 @@
 package org.toDoList.model;
 
-import java.util.Objects;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Tasks {
+public class Task {
     int id;
     String name;
     String task;
     String personalUrl;
     String userName;
-    String status;
+    TaskStatus status;
+
 
     public int getId() {
         return id;
@@ -50,11 +52,11 @@ public class Tasks {
         this.userName = userName;
     }
 
-    public String getStatus() {
+    public TaskStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(TaskStatus status) {
         this.status = status;
     }
 }

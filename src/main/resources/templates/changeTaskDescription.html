@@ -19,8 +19,7 @@
             <div id="change_div">
                 <label id="statusLabel" for="userType">Сменить статус:</label>
                 <select id="status" name="status" required>
-                    <option value="Не выполнен" selected>Не выполнен</option>
-                    <option value="Выполнен">Выполнен</option>
+                    <option th:each="statusElement : ${statusList}" th:value="${statusElement.name}" th:text="${statusElement.title}"></option>
                 </select><br><br>
 
                 <label id="userTypeLabel" for="userType">Сменить пользователя:</label>
